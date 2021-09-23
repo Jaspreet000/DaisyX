@@ -30,14 +30,14 @@ async def ai_lycia(url):
     return ai_name
 
 
-@LYCIA.on_message(filters.command("daisy"))
+@LYCIA.on_message(filters.command("jasmine"))
 async def Lycia(_, message):
     if len(message.command) < 2:
-        await message.reply_text("DaisyX AI Voice Chatbot")
+        await message.reply_text("Jasmine AI Voice Chatbot")
         return
     text = message.text.split(None, 1)[1]
     lycia = text.replace(" ", "%20")
-    m = await message.reply_text("Daisyx Is Best...")
+    m = await message.reply_text("Jasmine Is Best...")
     try:
         L = await fetch(
             f"https://api.affiliateplus.xyz/api/chatbot?message={lycia}&botname=Daisy&ownername=TeamDaisyX&user=1"
